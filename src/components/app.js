@@ -1,9 +1,10 @@
 import React from 'react';
 import './app.css';
 
-function App() {
+const App = ({children}) => {
   return (
-    <div className="app">
+    <div>
+      {children}
     </div>
   );
 }
