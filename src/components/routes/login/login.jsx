@@ -4,8 +4,10 @@ import { FormGroup, TextField, InputAdornment, IconButton, Icon } from '@materia
 import { Person, Visibility, VisibilityOff } from '@material-ui/icons';
 import Button from 'components/shared/button';
 
-const Login = () => {
+const Login = (props) => {
+
   const [visibility, setVisibility] = useState(false);
+
   return (
     <div className={css.container}>
       <FormGroup classes={{ root: css.formContainer }}>

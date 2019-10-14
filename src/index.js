@@ -12,16 +12,18 @@ import App from 'components/app';
 
 ReactDOM.render(
   <Provider store={store}>
-    <App>
-      <Router>
+    <Router>
+      <App>
         <Switch>
-          <LoginLayout>
-            <Route path='/login' component={Login} />
-            <Route path='my_chart' component={MyChart} />
-            <Route path='home' component={Home} />
-          </LoginLayout>
+          <Route exact path='/login'>
+            <LoginLayout>
+              <Login/>
+            </LoginLayout>
+          </Route>
+          <Route exact path='/my_chart' component={MyChart} />
+          <Route exact path='/home' component={Home} />
         </Switch>
-      </Router>
-    </App>
+      </App>
+    </Router>
   </Provider>
   , document.getElementById('root'));

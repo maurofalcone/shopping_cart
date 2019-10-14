@@ -1,16 +1,21 @@
 import React, { useCallback } from 'react';
+import { useHistory } from 'react-router-dom';
 import css from './header.module.css';
 
 const Header = (props) => {
+  
+  let history = useHistory();
 
   const redirectTo = useCallback((path) => {
-    props.history.push(`/${path}`);
-  }, [props.history]);
+    if (history) {
+      history.push(`./${path}`);
+    }
+  }, [history]);
 
   return (
     <div className={css.container}>
       <div className={css.buttonContainer}>
-        <span className={css.button} onClick={() => redirectTo('/')}>
+        <span className={css.button} onClick={() => redirectTo('home')}>
           Logo
         </span>
       </div>
