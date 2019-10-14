@@ -7,6 +7,9 @@ const LoginLayout = ({children}) => {
       <div className={css.childrenContainer}>
         {children}
       </div>
+      <div className={css.footerContainer}>
+        Footer
+      </div>
     </div>
   );
 };

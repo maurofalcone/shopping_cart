@@ -8,3 +8,8 @@
 .childrenContainer {
   flex: 1;
 }
+
+.footerContainer {
+  height: 50px;
+  width: 100%;
+}
