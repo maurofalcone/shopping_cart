@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to bottom, #DD0000 25%, #FFFFFF 25%);
+}
+
+.headerContainer {
+  height: 50px;
+  width: 100%;
+}
+
+.childrenContainer {
+  flex: 1;
+}
+
+.footerContainer {
+  height: 50px;
+  width: 100%;
+  background: #999;
+}
