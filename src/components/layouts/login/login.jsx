@@ -1,10 +1,12 @@
 import React from 'react';
 import css from './login.module.css';
 
-const LoginLayout = (props) => {
+const LoginLayout = ({children}) => {
   return (
-    <div className={css.login}>
-      {props.children}
+    <div className={css.container}>
+      <div className={css.childrenContainer}>
+        {children}
+      </div>
     </div>
   );
 };

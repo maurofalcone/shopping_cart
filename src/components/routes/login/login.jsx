@@ -1,9 +1,68 @@
-import React from 'react';
+import React, { useState } from 'react';
+import css from './login.module.css';
+import { FormGroup, TextField, InputAdornment, IconButton, Icon, Button } from '@material-ui/core';
+import { Person, Visibility, VisibilityOff } from '@material-ui/icons';
 
 const Login = () => {
+  const [visibility, setVisibility] = useState(false);
   return (
-    <div>
-      Login Content
+    <div className={css.container}>
+      <FormGroup classes={{ root: css.formContainer }}>
+        <div className={css.inputsContainer}>
+          <TextField
+            classes={{ root: css.textField }}
+            variant='outlined'
+            label='Usuario'
+            InputProps={{
+              classes: {
+                notchedOutline: css.textFieldNotched,
+              },
+              endAdornment: (
+                <InputAdornment position="end">
+                  <Icon>
+                    <Person />
+                  </Icon>
+                </InputAdornment>
+              ),
+            }}
+            InputLabelProps={{ classes: { focused: css.inputLabelFocused } }}
+          />
+          <TextField
+            classes={{
+              root: css.textField,
+            }}
+            id="outlined-adornment-password"
+            variant="outlined"
+            type={visibility ? 'text' : 'password'}
+            label="Contraseña"
+            InputProps={{
+              classes: {
+                notchedOutline: css.textFieldNotched,
+              },
+              endAdornment: (
+                <InputAdornment position="end">
+                  <IconButton
+                    edge="end"
+                    aria-label="toggle password visibility"
+                    onClick={() => setVisibility(!visibility)}
+                    classes={{
+                      root: css.blackIcon
+                    }}
+                  >
+                    {visibility ? <VisibilityOff /> : <Visibility />}
+                  </IconButton>
+                </InputAdornment>
+              ),
+            }}
+            InputLabelProps={{
+              classes: {
+                focused: css.inputLabelFocused,
+              }
+            }}
+          />
+        </div>
+        <Button classes={{ root: css.button }} variant='contained'> Iniciar Sesión </Button>
+      </FormGroup>
     </div>
   );
 };

@@ -1,10 +1,10 @@
 const initialState = {
 
-}
+};
 
-const authReducer =(state, action) => {
-  return initialState
-}
+const authReducer = (state, action) => {
+  return initialState;
+};
 
-export default authReducer
+export default authReducer;
 

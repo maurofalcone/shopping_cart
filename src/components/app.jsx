@@ -1,9 +1,9 @@
 import React from 'react';
-import './app.css';
+import css from './app.module.css';
 
 const App = ({children}) => {
   return (
-    <div>
+    <div className={css.container}>
       {children}
     </div>
   );
