@@ -26,16 +26,7 @@
 }
 
 .container .inputLabelFocused {
-  color: #FF0000 !important;
-}
-
-.container .formContainer .button {
-  box-shadow: none;
-  background: #FF0000;
-  color: #FFFFFF;
-  height: 50px;
-  width: 55%;
-  box-shadow: 1px 1px 4px 2px #999;
+  color: #DD0000 !important;
 }
 
 .container .formContainer .blackIcon {
@@ -51,6 +42,7 @@
   height: 50%;
   width: 30%;
   padding: 50px 0px;
+  box-shadow: 2px 2px 2px 1px #AAA;
 }
 
 @media screen and (max-width: 900px) {

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import css from './login.module.css';
-import { FormGroup, TextField, InputAdornment, IconButton, Icon, Button } from '@material-ui/core';
+import { FormGroup, TextField, InputAdornment, IconButton, Icon } from '@material-ui/core';
 import { Person, Visibility, VisibilityOff } from '@material-ui/icons';
+import Button from 'components/shared/button';
 
 const Login = () => {
   const [visibility, setVisibility] = useState(false);
@@ -61,7 +62,7 @@ const Login = () => {
             }}
           />
         </div>
-        <Button classes={{ root: css.button }} variant='contained'> Iniciar Sesión </Button>
+        <Button variant='buttonPrimary_large'>Iniciar Sesión</Button>
       </FormGroup>
     </div>
   );

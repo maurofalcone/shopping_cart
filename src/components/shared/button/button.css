@@ -1,0 +1,44 @@
+.buttonPrimary_small,
+.buttonPrimary_medium,
+.buttonPrimary_large {
+  background: #DD0000 !important;
+  box-shadow: none !important;
+  color: #FFFFFF !important;
+}
+
+.buttonPrimary_large,
+.buttonSecondary_large {
+  height: 50px !important;
+  width: 260px !important;
+}
+
+.buttonPrimary_medium,
+.buttonSecondary_medium {
+  height: 50px !important;
+  width: 190px !important;
+}
+
+.buttonPrimary_small,
+.buttonSecondary_small {
+  height: 50px !important;
+  width: 150px !important;
+}
+
+.buttonSecondary_small,
+.buttonSecondary_medium,
+.buttonSecondary_large {
+  border: 1px solid #DD0000 !important;
+  background: #FFFFFF !important;
+  color: #DD0000 !important;
+}
+
+@media screen and (max-width: 800px) {
+  .buttonPrimary_small,
+  .buttonPrimary_medium,
+  .buttonPrimary_large,
+  .buttonSecondary_small,
+  .buttonSecondary_medium,
+  .buttonSecondary_large {
+    width: 150px !important;
+  }
+}
